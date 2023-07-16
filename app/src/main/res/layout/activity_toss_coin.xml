@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".tossCoinActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/FlipHistory_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/coin_toolbarTitle" />
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:id="@+id/coin_choiceLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tossButton">
+
+        <RadioGroup
+            android:id="@+id/Coin_choiceRadioButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/Coin_headsBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/radio_buttons_custom_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/raleway_light"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked"
+                android:padding="16dp"
+                android:text="@string/coin_heads"
+                android:textColor="@drawable/radio_buttons_custom_text"
+                android:textStyle="bold" />
+
+            <RadioButton
+                android:id="@+id/Coin_tailsBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_weight="0.5"
+                android:background="@drawable/radio_buttons_custom_selector"
+                android:button="@android:color/transparent"
+                android:fontFamily="@font/raleway_light"
+                android:gravity="center"
+                android:onClick="onRadioButtonClicked"
+                android:padding="16dp"
+                android:text="@string/coin_tails"
+                android:textColor="@drawable/radio_buttons_custom_text"
+                android:textStyle="bold" />
+
+        </RadioGroup>
+
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <ImageView
+        android:id="@+id/coinImageView"
+        android:layout_width="199dp"
+        android:layout_height="188dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@string/image_of_coin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Coin_flipResult"
+        app:srcCompat="@drawable/coin_head" />
+
+    <Button
+        android:id="@+id/tossButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/custom_button_primary"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/toss"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coinImageView" />
+
+    <TextView
+        android:id="@+id/Coin_childNameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/coin_childTurnText"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/FlipHistory_toolbar" />
+
+    <TextView
+        android:id="@+id/Coin_flipResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:fontFamily="@font/fredokaone_regular"
+        android:text="@string/coin_heads"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Coin_childAvatar" />
+
+    <Button
+        android:id="@+id/Coin_viewHistoryButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_button_secondary"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/coin_viewHistoryBtn"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/Coin_flipAgainBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/custom_button_secondary"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/toss_again"
+        android:textColor="@color/cardview_light_background"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/Coin_chooseChildBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/coin_chooseChildBtn"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Coin_childNameLabel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Coin_childNameLabel" />
+
+    <ImageView
+        android:id="@+id/Coin_childAvatar"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginLeft="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Coin_childNameLabel"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+    <TextView
+        android:id="@+id/Coin_childName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:text="Placeholder"
+        app:layout_constraintBottom_toBottomOf="@+id/Coin_childAvatar"
+        app:layout_constraintStart_toEndOf="@+id/Coin_childAvatar"
+        app:layout_constraintTop_toTopOf="@+id/Coin_childAvatar" />
+
+</android.support.constraint.ConstraintLayout>

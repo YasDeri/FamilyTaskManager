@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewChildActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/addNewChildToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/addChild_toolbarTitle" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewChild_setAvatarBtn" />
+
+    <EditText
+        android:id="@+id/editTextViewForName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway_light"
+        android:hint="@string/andy"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageButton
+        android:id="@+id/childInfoSaveButton"
+        android:layout_width="42dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/addNewChildToolBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/addNewChildToolBar"
+        app:srcCompat="@drawable/ic_save_white_24dp" />
+
+    <Button
+        android:id="@+id/NewChild_setAvatarBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/NewChild_setAvatarBtn"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/NewChild_Avatar"
+        app:layout_constraintStart_toStartOf="@+id/NewChild_Avatar"
+        app:layout_constraintTop_toBottomOf="@+id/NewChild_Avatar" />
+
+    <ImageView
+        android:id="@+id/NewChild_Avatar"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addNewChildToolBar"
+        app:srcCompat="@drawable/ic_person_black_24dp" />
+
+</android.support.constraint.ConstraintLayout>

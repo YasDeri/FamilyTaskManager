@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- "Mark Favorite", should appear as action button if possible -->
+    <item
+        android:id="@+id/deleteCurrentTaskButton"
+        android:icon="@drawable/ic_delete_white_24dp"
+        android:title="@string/edit_current_task"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/taskEditButton"
+        android:icon="@drawable/ic_edit_white_24dp"
+        android:title="@string/turn_on_off_edit_mode"
+        app:showAsAction="ifRoom" />
+
+</menu>

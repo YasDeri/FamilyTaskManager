@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/Main_actionsScrollView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Menu_actionsLabel">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Main_coinFlipCard"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/Main_flipCoinImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_baseline_flip_camera_android_24" />
+
+                <TextView
+                    android:id="@+id/Main_coinFlipLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="@string/main_coinflipButton"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Main_alarmCard"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/Main_timeoutImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_alarm_white_24" />
+
+                <TextView
+                    android:id="@+id/Main_alarmLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="@string/main_timeoutButton"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Main_tasksCard"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/Main_tasksImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_baseline_playlist_add_check_24" />
+
+                <TextView
+                    android:id="@+id/Main_tasksLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="@string/main_tasksButton"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Main_breathCard"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/Main_break"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    android:background="#00FFFFFF"
+                    app:srcCompat="@drawable/ic_break_icon" />
+
+                <TextView
+                    android:id="@+id/Main_breathLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="@string/deep_breath"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/Main_helpCard"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_margin="8dp"
+                app:cardBackgroundColor="@color/colorAccent"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="8dp">
+
+                <ImageView
+                    android:id="@+id/Main_helpImage"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="end"
+                    android:layout_margin="16dp"
+                    app:srcCompat="@drawable/ic_baseline_help_24" />
+
+                <TextView
+                    android:id="@+id/Main_helpLabel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="16dp"
+                    android:fontFamily="@font/raleway_light"
+                    android:text="@string/Help_page"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp" />
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/Menu_actionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/main_actionsLabel"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/Main_childrenLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/children_toolbarTitle"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_actionsScrollView" />
+
+    <ListView
+        android:id="@+id/Main_childrenList"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:divider="@null"
+        android:dividerHeight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_childrenLabel" />
+
+    <Button
+        android:id="@+id/Main_addChildButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/main_addChildButton"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Main_actionsScrollView" />
+
+</android.support.constraint.ConstraintLayout>

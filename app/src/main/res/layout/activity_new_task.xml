@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewTaskActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/newTaskToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/newTask_toolbarTitle" />
+
+    <TextView
+        android:id="@+id/NewTask_nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/task_name"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newTaskToolbar" />
+
+    <EditText
+        android:id="@+id/taskNameEditTextVIew"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:autofillHints="Put cans into can cooler"
+        android:ems="10"
+        android:fontFamily="@font/raleway_light"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewTask_nameLabel" />
+
+    <TextView
+        android:id="@+id/NewTask_descLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/description"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskNameEditTextVIew" />
+
+    <EditText
+        android:id="@+id/taskDescriptionEditTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:autofillHints="@string/empty"
+        android:ems="10"
+        android:fontFamily="@font/raleway_light"
+        android:hint="@string/empty"
+        android:inputType="textMultiLine"
+        android:lines="3"
+        android:maxLines="6"
+        android:minLines="1"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewTask_descLabel" />
+
+    <ListView
+        android:id="@+id/pickChildForNewTaskListVIew"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewTask_childLabel" />
+
+    <TextView
+        android:id="@+id/NewTask_childLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/first_assign_to"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskDescriptionEditTextView" />
+
+    <TextView
+        android:id="@+id/currentlyAssignToTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/NewTask_childLabel"
+        app:layout_constraintStart_toEndOf="@+id/NewTask_childLabel"
+        app:layout_constraintTop_toTopOf="@+id/NewTask_childLabel" />
+
+    <TextView
+        android:id="@+id/NewTask_noChildrenMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NewTask_childLabel" />
+
+</android.support.constraint.ConstraintLayout>

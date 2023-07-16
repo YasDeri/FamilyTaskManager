@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AlarmActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/Alarm_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/alarm_toolbarTitle" />
+
+    <android.support.v4.widget.ContentLoadingProgressBar
+        android:id="@+id/Alarm_progressCircle"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginBottom="150dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/progress_circle"
+        android:rotation="-90"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_customTimeField"
+        tools:progress="60" />
+
+    <TextView
+        android:id="@+id/Alarm_timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fredokaone_regular"
+        android:text="00:00"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/Alarm_progressCircle"
+        app:layout_constraintEnd_toEndOf="@+id/Alarm_progressCircle"
+        app:layout_constraintStart_toStartOf="@+id/Alarm_progressCircle"
+        app:layout_constraintTop_toTopOf="@+id/Alarm_progressCircle" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/Alarm_startButton"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:backgroundTint="@color/colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_progressCircle"
+        app:srcCompat="@drawable/ic_play_arrow_white_24dp"
+        tools:srcCompat="@drawable/ic_play_arrow_white_24dp" />
+
+    <Button
+        android:id="@+id/Alarm_resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/alarm_resetButton"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_timeText" />
+
+    <Spinner
+        android:id="@+id/Alarm_timeOptions"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginRight="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_customFieldLabel" />
+
+    <EditText
+        android:id="@+id/Alarm_customTimeField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:ems="10"
+        android:fontFamily="@font/raleway_light"
+        android:inputType="number"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/Alarm_timeOptions"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/Alarm_timeOptions"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_timeOptions" />
+
+    <TextView
+        android:id="@+id/Alarm_customFieldLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/alarm_customOptionLabel"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/Alarm_timeOptions"
+        app:layout_constraintTop_toBottomOf="@+id/Alarm_toolbar" />
+
+    <Spinner
+        android:id="@+id/speedSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Alarm_speedLabel2"
+        app:layout_constraintEnd_toStartOf="@+id/Alarm_speedLabel2"
+        app:layout_constraintTop_toTopOf="@+id/Alarm_speedLabel2" />
+
+    <TextView
+        android:id="@+id/Alarm_speedLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/percentage"
+        android:textColor="#1B171616"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/Alarm_speedLabel1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/at"
+        android:textColor="#1B171616"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/speedSpinner"
+        app:layout_constraintEnd_toStartOf="@+id/speedSpinner"
+        app:layout_constraintTop_toTopOf="@+id/speedSpinner" />
+
+</android.support.constraint.ConstraintLayout>

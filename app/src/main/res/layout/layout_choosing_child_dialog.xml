@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <Button
+        android:id="@+id/ChoosingChild_noneButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_button_primary"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/coin_chooseNoneBtn"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/ChoosingChild_childrenLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:fontFamily="@font/raleway_light"
+        android:text="@string/coin_childQueueLabel"
+        android:textStyle="bold"
+        android:layout_below="@id/ChoosingChild_noneButton"/>
+
+    <ListView
+        android:id="@+id/ChoosingChild_childList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ChoosingChild_childrenLabel"
+        android:dividerHeight="8dp"
+        android:divider="@null"/>
+
+</RelativeLayout>
